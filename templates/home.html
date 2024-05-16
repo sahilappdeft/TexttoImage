@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Image</title>
+</head>
+<body>
+    <h1>Text to Image</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate Image</button>
+    </form>
+    {% if generated_image %}
+        <h2>Generated Image</h2>
+        <img src="{{ generated_image.image.url }}" alt="Generated Image">
+    {% endif %}
+</body>
+</html>
