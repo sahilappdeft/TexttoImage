@@ -37,4 +37,4 @@ def infer(prompt, negative_prompt, seed, randomize_seed, width, height, guidance
     
     return image
 
-fun = infer("prompt", "negative_prompt", 23, 3, 1011, 656, None, None)
+fun = infer("prompt", "negative_prompt", 23, 3, 800, 800, 9, 9)
